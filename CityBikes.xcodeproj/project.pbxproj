@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0E5CEB972BCC66D2004D978F /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5CEB962BCC66D2004D978F /* Station.swift */; };
+		0E5CEB9A2BCC6795004D978F /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5CEB992BCC6795004D978F /* WebService.swift */; };
+		0E5CEB9C2BCC68F9004D978F /* CityBikesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5CEB9B2BCC68F9004D978F /* CityBikesResponse.swift */; };
 		0E64A1DF2BBE827300D849D9 /* CityBikesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64A1DE2BBE827300D849D9 /* CityBikesApp.swift */; };
 		0E64A1E12BBE827300D849D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64A1E02BBE827300D849D9 /* ContentView.swift */; };
 		0E64A1E32BBE827400D849D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E64A1E22BBE827400D849D9 /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* Begin PBXFileReference section */
 		0E5CEB942BCC6624004D978F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0E5CEB962BCC66D2004D978F /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		0E5CEB992BCC6795004D978F /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		0E5CEB9B2BCC68F9004D978F /* CityBikesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBikesResponse.swift; sourceTree = "<group>"; };
 		0E64A1DB2BBE827300D849D9 /* CityBikes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityBikes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E64A1DE2BBE827300D849D9 /* CityBikesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBikesApp.swift; sourceTree = "<group>"; };
 		0E64A1E02BBE827300D849D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,8 +43,17 @@
 			isa = PBXGroup;
 			children = (
 				0E5CEB962BCC66D2004D978F /* Station.swift */,
+				0E5CEB9B2BCC68F9004D978F /* CityBikesResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0E5CEB982BCC6771004D978F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0E5CEB992BCC6795004D978F /* WebService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		0E64A1D22BBE827300D849D9 = {
@@ -62,6 +75,7 @@
 		0E64A1DD2BBE827300D849D9 /* CityBikes */ = {
 			isa = PBXGroup;
 			children = (
+				0E5CEB982BCC6771004D978F /* Services */,
 				0E5CEB952BCC669C004D978F /* Model */,
 				0E5CEB942BCC6624004D978F /* Info.plist */,
 				0E64A1DE2BBE827300D849D9 /* CityBikesApp.swift */,
@@ -152,7 +166,9 @@
 			files = (
 				0E64A1E12BBE827300D849D9 /* ContentView.swift in Sources */,
 				0E5CEB972BCC66D2004D978F /* Station.swift in Sources */,
+				0E5CEB9A2BCC6795004D978F /* WebService.swift in Sources */,
 				0E64A1DF2BBE827300D849D9 /* CityBikesApp.swift in Sources */,
+				0E5CEB9C2BCC68F9004D978F /* CityBikesResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
