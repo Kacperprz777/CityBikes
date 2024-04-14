@@ -10,7 +10,7 @@ import MapKit
 
 struct MapView: View {
     
-    @StateObject var viewModel: DetailViewViewModel
+    @StateObject var viewModel: MapViewViewModel
     
     var body: some View {
         ZStack{

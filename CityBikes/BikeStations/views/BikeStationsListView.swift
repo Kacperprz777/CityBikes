@@ -15,7 +15,7 @@ struct BikeStationsListView: View {
         
         List {
             ForEach(stations) { station in
-                NavigationLink(destination: DetailView(viewModel: DetailViewViewModel(station: station))) {
+                NavigationLink(destination: MapView(viewModel: MapViewViewModel(station: station))) {
                     BikeStationRow(station: station)
                 }
                 .listRowSeparator(.hidden)
