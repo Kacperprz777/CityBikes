@@ -36,9 +36,6 @@ struct RequestLocationView: View {
       locationManager.updateAuthorizationStatus()
     }
   }
-    func startUpdatingLocation() {
-      locationManager.startUpdatingLocation()
-    }
 }
 
 struct RequestLocationView_Previews: PreviewProvider {
