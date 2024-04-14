@@ -14,6 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E5CEB942BCC6624004D978F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0E64A1DB2BBE827300D849D9 /* CityBikes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityBikes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E64A1DE2BBE827300D849D9 /* CityBikesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBikesApp.swift; sourceTree = "<group>"; };
 		0E64A1E02BBE827300D849D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		0E64A1DD2BBE827300D849D9 /* CityBikes */ = {
 			isa = PBXGroup;
 			children = (
+				0E5CEB942BCC6624004D978F /* Info.plist */,
 				0E64A1DE2BBE827300D849D9 /* CityBikesApp.swift */,
 				0E64A1E02BBE827300D849D9 /* ContentView.swift */,
 				0E64A1E22BBE827400D849D9 /* Assets.xcassets */,
@@ -274,6 +276,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CityBikes/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CityBikes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -302,6 +305,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CityBikes/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CityBikes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
