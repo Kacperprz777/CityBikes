@@ -61,6 +61,13 @@ struct LocationDetailsView: View {
     }
 }
 
-//#Preview {
-//    LocationDetailsView()
-//}
+#Preview {
+    @State var showDetails = true
+    @State var stationAddress: String? = "Nowowiejska, Warszawa"
+    
+    let coordinate = CLLocationCoordinate2D(latitude: 52.219916, longitude: 21.011682)
+    let lookAroundSceneRequest = MKLookAroundSceneRequest(coordinate: coordinate)
+    
+    return LocationDetailsView(lookAroundScene: nil, showDetails: $showDetails, stationAdress: $stationAddress, requestForLookAroundPreview: lookAroundSceneRequest, stationName: "Plac Politechniki")
+}
+

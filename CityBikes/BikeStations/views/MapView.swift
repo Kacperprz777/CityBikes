@@ -53,5 +53,6 @@ struct MapView: View {
 }
 
 
-//#Preview {
-//}
+#Preview {
+    MapView(viewModel: MapViewViewModel(station: Station(emptySlots: 0, freeBikes: 5, id: "testID", latitude: 52.219916, longitude: 21.011682, name: "Plac Politechniki")))
+}

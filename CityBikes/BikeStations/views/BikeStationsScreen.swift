@@ -24,4 +24,7 @@ struct BikeStationsScreen: View {
         }
     }
 }
-//#Preview {}
+
+#Preview {
+    BikeStationsScreen().environmentObject(LocationManager())
+}
