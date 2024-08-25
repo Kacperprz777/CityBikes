@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct CityBikesApp: App {
+    
+    @StateObject var locationManager = LocationManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-        }
+            BikeStationsScreen()
+            .environmentObject(locationManager)        }
     }
 }
