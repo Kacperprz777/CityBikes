@@ -11,12 +11,13 @@ import MapKit
 struct MapView: View {
     
     @StateObject var viewModel: MapViewViewModel
-    
+    @State private var mapCameraPosition: MapCameraPosition = .automatic
+
     var body: some View {
         ZStack{
             
-            Map(position: $viewModel.mapCameraPosition) {
-                Annotation(viewModel.station.name, coordinate: viewModel.stationCoordinate) {
+            Map(position: $mapCameraPosition) {
+                Annotation(viewModel.stationName, coordinate: viewModel.stationCoordinate) {
                     
                     ZStack {
                         Circle()
@@ -31,7 +32,11 @@ struct MapView: View {
                             .clipShape(Circle())
                     }
                 }
-            }.task {
+            }
+            .onAppear {
+                updateCameraPosition()
+            }
+            .task {
                 await viewModel.fetchStationAddress()
             }
             .onTapGesture {
@@ -39,8 +44,8 @@ struct MapView: View {
             }
             .sheet(isPresented: $viewModel.showDetails, content: {
                 LocationDetailsView(showDetails: $viewModel.showDetails,
-                                    stationAdress: $viewModel.stationAdress,
-                                    requestForLookAroundPreview: viewModel.getRequestForLookAroundPreview(),
+                                    stationAdress: $viewModel.stationAddress,
+                                    requestForLookAroundPreview: createLookAroundSceneRequest(),
                                     stationName: viewModel.stationName
                 )
                 .presentationDetents([.height(290)])
@@ -49,6 +54,18 @@ struct MapView: View {
             })
             
         }
+    }
+    
+    private func updateCameraPosition() {
+        let regionData = viewModel.stationRegionCoordinates
+        let region = MKCoordinateRegion(center: regionData.center, latitudinalMeters: regionData.latitudinalMeters, longitudinalMeters: regionData.longitudinalMeters)
+        mapCameraPosition = .region(region)
+    }
+    
+    private func createLookAroundSceneRequest() -> MKLookAroundSceneRequest {
+        // Utworzenie MKLookAroundSceneRequest w warstwie UI
+        let coordinate = viewModel.stationCoordinate
+        return MKLookAroundSceneRequest(coordinate: coordinate)
     }
 }
 

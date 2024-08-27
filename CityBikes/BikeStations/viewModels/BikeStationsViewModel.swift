@@ -12,10 +12,11 @@ final class BikeStationsViewModel: ObservableObject {
     
     @Published var allStations: [Station] = []
     
-    private let dataService = StationsService()
+    private let dataService: StationsService
     private var cancellables = Set<AnyCancellable>()
     
-    init() {
+    init(dataService: StationsService = StationsService()) {
+        self.dataService = dataService
         addSubscribers()
     }
     

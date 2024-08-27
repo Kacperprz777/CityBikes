@@ -6,56 +6,50 @@
 //
 
 import Foundation
-import _MapKit_SwiftUI
+import CoreLocation
 
 @MainActor
 final class MapViewViewModel: ObservableObject {
     
-    @Published var mapCameraPosition: MapCameraPosition = .automatic
     @Published var showDetails: Bool = true
-    @Published var stationAdress: String?
+    @Published var stationAddress: String?
     
     
-    let station: Station
+    private let station: Station
+    private let geocoder: CLGeocoder
     
     var stationName: String {
         station.name
     }
     
-    var stationRegion: MKCoordinateRegion {
-        .init(center: stationCoordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+    var stationRegionCoordinates: (center: CLLocationCoordinate2D, latitudinalMeters: CLLocationDistance, longitudinalMeters: CLLocationDistance ) {
+        (center: stationCoordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
     }
     
     
     var stationCoordinate: CLLocationCoordinate2D  {
         CLLocationCoordinate2D(latitude: station.latitude, longitude: station.longitude)
     }
-    init(station: Station) {
+    init(station: Station, geocoder: CLGeocoder = CLGeocoder()) {
         self.station = station
-        updateMapCameraPosition()
+        self.geocoder = geocoder
     }
     
-    func updateMapCameraPosition() {
-        mapCameraPosition = .region(stationRegion)
-    }
-    
-    func getRequestForLookAroundPreview() -> MKLookAroundSceneRequest {
-        MKLookAroundSceneRequest(coordinate: stationCoordinate)
-    }
     
     func fetchStationAddress() async {
         
         do {
-            let address = try await getAddressDescription(for: station.coordinates)
-            stationAdress = address
+            let address = try await getAddressDescription(for: stationCoordinate)
+            stationAddress = address
         } catch {
             print("Error fetching address:", error)
         }
     }
     
-    private func getAddressDescription(for location: CLLocation) async throws -> String? {
+    private func getAddressDescription(for coordinate: CLLocationCoordinate2D) async throws -> String? {
+        let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
         do {
-            let placemarks = try await CLGeocoder().reverseGeocodeLocation(location)
+            let placemarks = try await geocoder.reverseGeocodeLocation(location)
             if let place = placemarks.first {
                 let addressComponents = [
                     place.thoroughfare,

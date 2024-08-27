@@ -1,5 +1,5 @@
 //
-//  WebService.swift
+//  StationsService.swift
 //  CityBikes
 //
 //  Created by Kacper Przybyła on 14/04/2024.

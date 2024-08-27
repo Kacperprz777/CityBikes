@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E31728F2C7D26B600EA23A5 /* CityBikesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31728E2C7D26B600EA23A5 /* CityBikesTests.swift */; };
 		0E5CEB972BCC66D2004D978F /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5CEB962BCC66D2004D978F /* Station.swift */; };
-		0E5CEB9A2BCC6795004D978F /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5CEB992BCC6795004D978F /* WebService.swift */; };
+		0E5CEB9A2BCC6795004D978F /* StationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5CEB992BCC6795004D978F /* StationsService.swift */; };
 		0E5CEB9C2BCC68F9004D978F /* CityBikesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5CEB9B2BCC68F9004D978F /* CityBikesResponse.swift */; };
 		0E5CEB9F2BCC6A07004D978F /* BikeStationsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5CEB9E2BCC6A07004D978F /* BikeStationsScreen.swift */; };
 		0E5CEBA22BCC6AD3004D978F /* BikeStationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5CEBA12BCC6AD3004D978F /* BikeStationsViewModel.swift */; };
@@ -40,7 +40,7 @@
 		0E31728E2C7D26B600EA23A5 /* CityBikesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBikesTests.swift; sourceTree = "<group>"; };
 		0E5CEB942BCC6624004D978F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0E5CEB962BCC66D2004D978F /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
-		0E5CEB992BCC6795004D978F /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		0E5CEB992BCC6795004D978F /* StationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsService.swift; sourceTree = "<group>"; };
 		0E5CEB9B2BCC68F9004D978F /* CityBikesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBikesResponse.swift; sourceTree = "<group>"; };
 		0E5CEB9E2BCC6A07004D978F /* BikeStationsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeStationsScreen.swift; sourceTree = "<group>"; };
 		0E5CEBA12BCC6AD3004D978F /* BikeStationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeStationsViewModel.swift; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 		0E5CEB982BCC6771004D978F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				0E5CEB992BCC6795004D978F /* WebService.swift */,
+				0E5CEB992BCC6795004D978F /* StationsService.swift */,
 				0E5CEBA72BCC6C92004D978F /* LocationManager.swift */,
 			);
 			path = Services;
@@ -284,7 +284,7 @@
 				0E5CEBB02BCC6F33004D978F /* MapViewViewModel.swift in Sources */,
 				0E5CEB972BCC66D2004D978F /* Station.swift in Sources */,
 				0E5CEBB22BCC703D004D978F /* LocationDetailsView.swift in Sources */,
-				0E5CEB9A2BCC6795004D978F /* WebService.swift in Sources */,
+				0E5CEB9A2BCC6795004D978F /* StationsService.swift in Sources */,
 				0E5CEB9F2BCC6A07004D978F /* BikeStationsScreen.swift in Sources */,
 				0E5CEBAC2BCC6DDF004D978F /* BikeStationRow.swift in Sources */,
 				0E64A1DF2BBE827300D849D9 /* CityBikesApp.swift in Sources */,
