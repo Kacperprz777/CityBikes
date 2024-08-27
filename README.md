@@ -8,6 +8,8 @@ iOS App for displaying bike stations in Warsaw.
 -   Combine
 -   JSON
 -   REST API
+-   MapKit
+-   CoreLocation
 
 ## CityBikes API
 The application uses data provided by the CityBikes API. 
